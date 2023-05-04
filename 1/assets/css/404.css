@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url(../img/bg-pecahkan.png);
+  background-size: 100%;
+  background-position-y: 67vh;
+}
+/* ============ Navbar ============ */
+.banner-promo {
+  max-width: 390px;
+}
+body.offcanvas-active {
+  overflow: hidden;
+}
+.cover-container {
+}
+.offcanvas-header {
+  display: none;
+}
+.navbar-nav .nav-item {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+.navbar-nav .nav-item a {
+  background-color: #025daa;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+.navbar-nav .nav-item a:hover {
+  border: 1px solid transparent;
+  border-color: #025daa;
+  transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+  background-color: white;
+  color: #025daa;
+}
+.dropdown-menu {
+  border: none !important;
+  background-color: transparent !important;
+}
+.dropdown-menu .dropdown-item {
+  margin-bottom: 0.5em;
+}
+.screen-darken {
+  height: 100%;
+  width: 0%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active {
+  z-index: 10;
+  transition: opacity 0.3s ease, width 0s;
+  opacity: 1;
+  width: 100%;
+  visibility: visible;
+}
+/* ============ Navbar End ============ */
+
+/* ============ Section Banner ============ */
+.section-content-banner {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+.section-content-banner .logo-company {
+  max-width: 60%;
+  height: 50%;
+}
+.section-content-text {
+  margin-left: 19em;
+  margin-right: 19em;
+  margin-bottom: 8em;
+}
+.section-content-text a {
+  text-decoration: none;
+  color: #1090cb;
+}
+.section-content-text .title {
+  font-weight: 600;
+}
+.section-content-text .details {
+  font-weight: 500;
+}
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+}
+footer .company-title {
+  justify-content: center;
+}
+footer a {
+  text-align: center;
+  color: white;
+  
+}
+footer p{
+  text-align: center;
+  color: white;
+}
+
+footer img {
+  width: 70px;
+}
+/* ============ Section Banner End ============ */
+@media all and (min-width: 1440px) {
+  body {
+    background-size: 118%;
+  }
+}
+/* ============ Tablet view ============ */
+@media all and (max-width: 992px) {
+  body {
+    background-position-y: bottom !important;
+    background-size: 180vw;
+  }
+  .offcanvas-header {
+    padding-left: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: block;
+    justify-items: center;
+  }
+  .offcanvas-header .logo-company {
+    width: 80px;
+    display: inline;
+  }
+
+  .mobile-offcanvas {
+    background-color: white;
+    visibility: hidden;
+    transform: translateX(-100%);
+    border-radius: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1200;
+    width: 33%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .mobile-offcanvas .mobile {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .navbar-nav {
+    gap: 0.2em;
+  }
+  .navbar-nav .nav-item {
+    background-color: rgb(241, 241, 241);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-right: 0.3em !important;
+    padding-left: 0;
+  }
+  .navbar-nav .nav-item a {
+    border: transparent !important;
+    padding-left: 1em;
+    color: #025daa;
+    background-color: transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom: 0px solid transparent;
+  }
+  .navbar-nav .nav-item a:hover {
+    padding-left: 1em;
+    transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+    color: #f8f9fa;
+    background-color: #1090cb;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom: 0px solid transparent;
+  }
+  .nav-item .dropdown-menu {
+    background-color: transparent;
+    border: none;
+  }
+  .nav-item .dropdown-menu .show {
+    padding-bottom: 0.2em;
+  }
+  .mobile-offcanvas.show {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .mobile-offcanvas .container,
+  .mobile-offcanvas .container-fluid {
+    display: block;
+  }
+  .section-content-banner {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .section-content-banner .logo-company {
+    max-width: 100%;
+    height: 100%;
+  }
+  .section-content-text {
+    margin: 0 auto;
+  }
+}
+/* ============ Tablet view .end// ============ */
+@media all and (max-width: 768px) {
+  .section-content-banner {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+/* ============ mobile view ============ */
+@media all and (max-width: 576px) {
+  body {
+    background-size: 225vw;
+  }
+  .section-content-banner {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .mobile-offcanvas {
+    visibility: hidden;
+    width: 70%;
+  }
+}
+/* ============ mobile view .end// ============ */
